@@ -7,11 +7,11 @@ v0.0.1, 2014-01-02
 :homepage: http://vladmihalcea.wordpress.com/
 
 == Introduction
-This book is meant to be written in an open-source manner and the reason for writing it may be found http://vladmihalcea.wordpress.com/2014/01/01/my-open-book-movement/[here^].
+This book is meant to be written in an open-source manner and the reason for writing it may be found http://vladmihalcea.wordpress.com/2014/01/01/my-open-book-movement/[here].
 
 == Writing guide
 
-This book is written using http://asciidoctor.org/[Asciidoctor^] for it offers:
+This book is written using http://asciidoctor.org/[Asciidoctor] for it offers:
 
 * a text-based document format, which eases collaboration and change tracking on GitHub
 * OS independence
