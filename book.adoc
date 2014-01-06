@@ -1,0 +1,20 @@
+= Unfolding Java Transactions
+Author <mih_vlad@yahoo.com>
+v0.0.1, 2014-01-06
+
+:toc:
+:imagesdir: images
+:homepage: http://vladmihalcea.wordpress.com/
+
+== Chapters
+link:chapters/ch1-the-chemistry-of-acid.adoc[Chapter 1: The chemistry of ACID]
+
+== Bibliography
+
+[bibliography]
+- [[[gray1]]] Jim Gray. http://research.microsoft.com/en-us/um/people/gray/papers/theTransactionConcept.pdf['The Transaction Concept:
+  Virtues and Limitations']. Tandem TR 81.3. 1981.
+  
+- [[[gray2]]] C.P. Eswaran, J.N. Gray, R.A. Lorie, and I.L. Traiger. http://research.microsoft.com/en-us/um/people/gray/papers/On%20the%20Notions%20of%20Consistency%20and%20Predicate%20Locks%20in%20a%20Database%20System%20CACM.pdf['The Notions of Consistency and Predicate Locks in a Database System ']. H. Morgan Editor. 1976.
+  ''
+  
