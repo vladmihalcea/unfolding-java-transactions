@@ -1,0 +1,1 @@
+asciidoctor -d book book.adoc

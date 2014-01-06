@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<book xmlns="http://docbook.org/ns/docbook" lang="en">
+<bookinfo>
+<title>Unfolding Java Transactions</title>
+<date>2014-01-06</date>
+<author>
+<firstname>Author</firstname>
+
+
+<email>mih_vlad@yahoo.com</email>
+</author>
+
+<authorinitials>A</authorinitials>
+<revhistory>
+<revision>
+<revnumber>0.0.1</revnumber>
+<date>2014-01-06</date>
+<authorinitials>A</authorinitials>
+
+</revision>
+</revhistory>
+
+
+
+</bookinfo>
+<chapter id="_chapters">
+<title>Chapters</title>
+
+</chapter>
+<part id="_the_chemistry_of_acid">
+<title>The chemistry of ACID</title>
+<simpara>Transactions are omnipresent in today&#8217;s enterprise systems, providing data integrity even in highly concurrent environments. So let&#8217;s get started by first defining the term and the context where you might usually employ it.</simpara>
+<simpara>A transaction is a collection of read/write operations succeeding only if all contained operations succeed.</simpara>
+<figure>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="image/Transaction-workflow.gif"/>
+    </imageobject>
+    <textobject><phrase>Transaction workflow</phrase></textobject>
+  </mediaobject>
+</figure>
+
+<simpara>Inherently a transaction is characterized by four properties (commonly referred as ACID) :</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Atomicity</simpara>
+</listitem>
+<listitem>
+<simpara>Consistency</simpara>
+</listitem>
+<listitem>
+<simpara>Isolation</simpara>
+</listitem>
+<listitem>
+<simpara>Durability</simpara>
+</listitem>
+</orderedlist>
+
+<simpara>It&#8217;s very important to understand those, hence we will discuss each and every one of them as follows.</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Atomicity takes individual operations and turns them into an all-or-nothing unit of work, succeeding if and only if all contained operations succeed.</simpara>
+</listitem>
+<listitem>
+<simpara>A transaction might encapsulates a state change (unless it is a read-only one). A transaction must always leave the system in a consistent state, no matter how many concurrent transactions are inter-leaved at any given time.</simpara>
+<simpara>Consistency has the following characteristics:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>if one operation triggers secondary actions (CASCADE, TRIGGERS), those must also succeed otherwise the transaction fails .</simpara>
+</listitem>
+<listitem>
+<simpara>if the system is composed of multiple nodes, then consistency mandates that all changes be propagated to all nodes (<ulink url="http://en.wikipedia.org/wiki/Multi-master_replication">multi-master replication</ulink>). If slaves nodes are updated asynchronously then we break the consistency rule, the system becoming <ulink url="http://en.wikipedia.org/wiki/Eventual_consistency">eventually consistent</ulink>".</simpara>
+</listitem>
+<listitem>
+<simpara>a transaction is a data state transition, so the system must operate as if all transactions occur in a serial form even if those are concurrently executed.</simpara>
+<simpara>If there would be only one connection running at all times, then serializability wouldn&#8217;t impose any concurrency control cost. In reality, all transactional systems must accommodate concurrent requests, hence serialization has its toll on scalability. The <ulink url="http://en.wikipedia.org/wiki/Amdahl%27s_law">Amdahl&#8217;s law</ulink> describes the relation between serial execution and concurrency:</simpara>
+<blockquote>
+  
+<simpara>The speed up of a program using multiple processors in parallel computing is limited by the time needed for the sequential fraction of the program.</simpara>
+</blockquote>
+
+<simpara>As you&#8217;ll see later, most database management systems choose (by default) to relax consistency to achieve better concurrency.</simpara>
+</listitem>
+</itemizedlist>
+
+</listitem>
+<listitem>
+<simpara>Isolation</simpara>
+<simpara>Transactions are concurrency control mechanisms, and they deliver consistency even when being interleaved. Isolation brings us the benefit of hiding uncommitted state changes from the outside world, as failing transactions shouldn&#8217;t ever corrupt the state of the system. Isolation is achieved through <ulink url="http://en.wikipedia.org/wiki/Concurrency_control">concurrency control</ulink> using pessimistic or optimistic locking mechanisms.</simpara>
+</listitem>
+<listitem>
+<simpara>Durability</simpara>
+<simpara>A successful transaction must permanently change the state of a system, and before ending it, the state changes are recorded in a persisted <ulink url="http://en.wikipedia.org/wiki/Transaction_log">transaction log</ulink>. If our system is suddenly affected by a system crash or a power outage, then all unfinished committed transactions may be replayed.</simpara>
+</listitem>
+</orderedlist>
+
+<simpara>For messaging systems like <ulink url="http://en.wikipedia.org/wiki/Java_Message_Service">JMS</ulink>, transactions are not mandatory. That&#8217;s why we have non-transacted&nbsp;http://docs.oracle.com/javaee/6/api/javax/jms/Session.html[acknowledgement modes].</simpara>
+<simpara>File system operations are usually non-managed, but if your business requirements demand transaction file operations, you might make use a tool such as <ulink url="https://xadisk.java.net/">XADisk</ulink>.</simpara>
+<simpara>While, messaging and file systems use transactions optionally, for database management systems transactions are compulsory. That&#8217;s the reason database connections define a default <ulink url="http://en.wikipedia.org/wiki/Autocommit">autocommit</ulink> mode. ACID is mandated by the SQL Standard, hence all operations must be embedded in a database transaction. But for an enterprise application, the autocommit mode is something you&#8217;d generally avoid, since it performs badly and it doesn&#8217;t allow you to include multiple <ulink url="http://en.wikipedia.org/wiki/Data_manipulation_language">DML</ulink> operations in a single atomic unit of work.</simpara>
+<simpara>ACID is old school. <ulink url="http://research.microsoft.com/en-us/um/people/gray/papers/theTransactionConcept.pdf">Jim Gray</ulink> described atomicity, consistency and durability long before I was even born. But that particular paper doesn&#8217;t mention anything about isolation. This is understandable, if we think of the production systems of the late 70&#8217;s, which according to Jim Gray:</simpara>
+<blockquote>
+  
+<simpara>"At present, the largest airlines and banks have about 10,000 terminals and about 100 active transactions at any instant".</simpara>
+</blockquote>
+
+<simpara>So all efforts were spent for delivering consistency rather than concurrency. Things have changed drastically ever since, and nowadays even modest set-ups are able to run 1000 TPS.</simpara>
+<simpara>From a database perspective, the atomicity is a fixed property, but everything else may be traded-off for performance/scalability reasons.</simpara>
+<simpara>Playing with durability makes sense for <ulink url="http://wiki.postgresql.org/images/3/3b/2011-11-11_PostgreSQL_SyncRepPerformance.pdf">highly performing clustered databases </ulink>if the enterprise system business requirements don&#8217;t mandate durable transactions. But, most often durability is better off untouched.</simpara>
+<simpara>Although some database management systems offer <ulink url="http://en.wikipedia.org/wiki/Multiversion_concurrency_control">MVCC</ulink>, usually concurrency control is achieved through locking. But as we all know, locking increases the serializable portion of the executed code, affecting <ulink url="http://en.wikipedia.org/wiki/Amdahl%27s_law#Parallelization">parallelization</ulink>.</simpara>
+<simpara>The SQL standard defines four Isolation levels:</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>READ_UNCOMMITTED</simpara>
+</listitem>
+<listitem>
+<simpara>READ_COMMITTED</simpara>
+</listitem>
+<listitem>
+<simpara>REPETABLE_READ</simpara>
+</listitem>
+<listitem>
+<simpara>SERIALIZABLE</simpara>
+</listitem>
+</orderedlist>
+
+<simpara>All but the SERIALIZABLE level are subject to data anomalies (phenomena) that might occur according to the following pattern:</simpara>
+<informaltable frame="all"
+    rowsep="1" colsep="1">
+  
+  <tgroup cols="1">
+    
+    <colspec colname="col_1" colwidth="100*"/>
+    
+    
+    <tbody>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Isolation Level, Dirty read, Non-repetable read, Phantom read</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>READ_UNCOMMITTED, allowed, allowed, allowed</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>READ_COMMITTED, prevented, allowed, allowed</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>REPETABLE_READ, prevented, prevented, allowed</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>SERIALIZABLE, prevented, prevented, prevented</simpara></entry>
+        
+      </row>
+      
+    </tbody>
+    
+  </tgroup>
+</informaltable>
+
+<simpara>But what are all those phenomena we&#8217;d just listed. Let&#8217;s discuss each and every one of them.</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Dirty read</simpara>
+</listitem>
+</orderedlist>
+
+<figure>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="image/acid-dirty-read.gif"/>
+    </imageobject>
+    <textobject><phrase>acid dirty read</phrase></textobject>
+  </mediaobject>
+</figure>
+
+<simpara>A dirty read happens when a transaction is allowed to read uncommitted changes of some other running transaction. This happens because there is no locking preventing it. In the picture above, you can see that the second transaction uses an inconsistent value as of the first transaction had rollbacked.</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Non-repetable read</simpara>
+</listitem>
+</orderedlist>
+
+<figure>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="image/acid-non-repetable-read.gif"/>
+    </imageobject>
+    <textobject><phrase>acid non repetable read</phrase></textobject>
+  </mediaobject>
+</figure>
+
+<simpara>A non-repetable read manifests when consecutive reads yield different results due to a concurring transaction that has just updated the record we&#8217;re reading. This is undesirable since we end up using stale data. This is prevented by holding a shared lock (read lock) on the read record for the whole duration of the current transaction.</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Phantom read</simpara>
+</listitem>
+</orderedlist>
+
+<figure>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="image/acid-phantom-read.gif"/>
+    </imageobject>
+    <textobject><phrase>acid phantom read</phrase></textobject>
+  </mediaobject>
+</figure>
+
+<simpara>A phantom read happens when a second transaction inserts a row that matches a previously select criteria of the first transaction. We therefore end up using stale data, which might affect our business operation. This is prevented using range locks or <ulink url="http://research.microsoft.com/en-us/um/people/gray/papers/On%20the%20Notions%20of%20Consistency%20and%20Predicate%20Locks%20in%20a%20Database%20System%20CACM.pdf">predicate locking</ulink>.</simpara>
+<simpara>Even if the SOL standard mandates the use of the SERIALIZABLE isolation level, most database management system use a different default level.|===</simpara>
+<informaltable frame="all"
+    rowsep="1" colsep="1">
+  
+  <tgroup cols="1">
+    
+    <colspec colname="col_1" colwidth="100*"/>
+    
+    
+    <tbody>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Database, Default isolation Level</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Oracle, READ_COMMITTED</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>MySQL, REPETABLE_READ</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Microsoft SQL Server, READ_COMMITTED</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>PostgreSQL, READ_COMMITTED</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>DB2, CURSOR STABILITY (a.k.a READ_COMMITTED)</simpara></entry>
+        
+      </row>
+      
+    </tbody>
+    
+  </tgroup>
+</informaltable>
+
+<simpara>Usually, READ_COMMITED is the right choice, since not even SERIALIZABLE can protect you from a "lost update" where the read/write happen in different transactions (and web requests). You should take into consideration your enterprise system requirements and set up tests for deciding which isolation level best suits your needs.</simpara>
+<simpara>If you are interested in learning more about Transactions you can follow me on my blog, or on <ulink url="https://twitter.com/vlad_mihalcea">twitter</ulink>.</simpara>
+<chapter id="_bibliography">
+<title>Bibliography</title>
+
+</chapter>
+</part>
+</book>

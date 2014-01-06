@@ -85,25 +85,27 @@ All but the SERIALIZABLE level are subject to data anomalies (phenomena) that mi
 
 But what are all those phenomena we'd just listed. Let's discuss each and every one of them.
 
-1. Dirty read
+. Dirty read
 
 image::acid-dirty-read.gif[]
 
 A dirty read happens when a transaction is allowed to read uncommitted changes of some other running transaction. This happens because there is no locking preventing it. In the picture above, you can see that the second transaction uses an inconsistent value as of the first transaction had rollbacked.
 
-2. Non-repetable read
+. Non-repetable read
 
 image::acid-non-repetable-read.gif[]
 
 A non-repetable read manifests when consecutive reads yield different results due to a concurring transaction that has just updated the record we're reading. This is undesirable since we end up using stale data. This is prevented by holding a shared lock (read lock) on the read record for the whole duration of the current transaction. 
 
-3. Phantom read
+. Phantom read
 
 image::acid-phantom-read.gif[]
 
 A phantom read happens when a second transaction inserts a row that matches a previously select criteria of the first transaction. We therefore end up using stale data, which might affect our business operation. This is prevented using range locks or http://research.microsoft.com/en-us/um/people/gray/papers/On%20the%20Notions%20of%20Consistency%20and%20Predicate%20Locks%20in%20a%20Database%20System%20CACM.pdf[predicate locking].
 
 Even if the SOL standard mandates the use of the SERIALIZABLE isolation level, most database management system use a different default level.|===
+
+|===
 |Database, Default isolation Level
 |Oracle, READ_COMMITTED
 |MySQL, REPETABLE_READ

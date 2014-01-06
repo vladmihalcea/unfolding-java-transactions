@@ -1,1 +1,1 @@
-asciidoctor -d book book.adoc
+asciidoctor -b docbook -d book book.adoc && fopub book.xml
