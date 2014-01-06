@@ -24,4 +24,3 @@ This book is written using http://asciidoctor.org/[Asciidoctor] for it offers:
 You can find an Asciidoctor quick reference http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[here].
 
 
-

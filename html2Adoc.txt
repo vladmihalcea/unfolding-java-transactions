@@ -1,0 +1,69 @@
+HTML to AsciiDoc Nodepad{plus}{plus}(Ctrl{plus}H)replacing tips
+
+E.g. From: <a href="http://en.wikipedia.org/wiki/Concurrency_control">concurrency control</a> to http://en.wikipedia.org/wiki/Concurrency_control[concurrency control]
+
+RegExp: <a href="(.*?)">(.*?)</a>
+Replace with: \1[\2]
+
+------------------------------------------------------------------------------------------------
+
+E.g. http://vladmihalcea.files.wordpress.com/2014/01/acid-dirty-read.gif[<img src="http://vladmihalcea.files.wordpress.com/2014/01/acid-dirty-read.gif?w=300" alt="ACID-dirty-read" width="300" height="284" class="alignnone size-medium wp-image-1265" />
+
+RegExp: .*?\[<img src="http.*?\.com.*/(.*?\.(png|gif|jpg)).*
+Replace with: image::\1[]
+
+------------------------------------------------------------------------------------------------
+
+RegExp: ^\s+</?[u|o]l>
+Replace with:
+
+------------------------------------------------------------------------------------------------
+
+RegExp: ^\s+<li>(.*?)</li>
+Replace with: . \1
+
+------------------------------------------------------------------------------------------------
+
+E.g. <blockquote>"At present, the largest airlines and banks have about 10,000 terminals and about 100 active transactions at any instant".</blockquote> to 
+
+[quote, ]
+____
+At present, the largest airlines and banks have about 10,000 terminals and about 100 active transactions at any instant.
+____
+
+RegExp: <blockquote>(.*?)</blockquote>
+Replace with: [quote, ]\r\n____\r\n\1\r\n____\r\n
+
+------------------------------------------------------------------------------------------------
+
+E.g.
+
+<table>
+<tr><th>Isolation Level</th><th>Dirty read</th><th>Non-repetable read</th><th>Phantom read</th></tr>
+<tr><td>READ_UNCOMMITTED</td><td>allowed</td><td>allowed</td><td>allowed</td></tr>
+<tr><td>READ_COMMITTED</td><td>prevented</td><td>allowed</td><td>allowed</td></tr>
+<tr><td>REPETABLE_READ</td><td>prevented</td><td>prevented</td><td>allowed</td></tr>
+<tr><td>SERIALIZABLE</td><td>prevented</td><td>prevented</td><td>prevented</td></tr>
+</table><table>
+<tr><th>Isolation Level</th><th>Dirty read</th><th>Non-repetable read</th><th>Phantom read</th></tr>
+<tr><td>READ_UNCOMMITTED</td><td>allowed</td><td>allowed</td><td>allowed</td></tr>
+<tr><td>READ_COMMITTED</td><td>prevented</td><td>allowed</td><td>allowed</td></tr>
+<tr><td>REPETABLE_READ</td><td>prevented</td><td>prevented</td><td>allowed</td></tr>
+<tr><td>SERIALIZABLE</td><td>prevented</td><td>prevented</td><td>prevented</td></tr>
+</table>
+
+RegExp: ^\s+</?table>
+Replace with: |===
+
+RegExp: </t[h|d]></tr>
+Replace with: 
+
+RegExp: <tr><t[h|d]>
+Replace with: |
+
+RegExp: </t[h|d]><t[h|d]>
+Replace with: , 
+
+------------------------------------------------------------------------------------------------
+
+http://vladmihalcea.files.wordpress.com/2014/01/acid-dirty-read.gif[<img src="http://vladmihalcea.files.wordpress.com/2014/01/acid-dirty-read.gif?w=300" alt="ACID-dirty-read" width="300" height="284" class="alignnone size-medium wp-image-1265" />
