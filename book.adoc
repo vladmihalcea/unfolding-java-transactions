@@ -3,7 +3,7 @@ Author <mih_vlad@yahoo.com>
 v0.0.1, 2014-01-06
 
 :toc:
-:imagesdir: images
+:imagesdir: chapters/image
 :homepage: http://vladmihalcea.wordpress.com/
 
 :chaptersdir: chapters

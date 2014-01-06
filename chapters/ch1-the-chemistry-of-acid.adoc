@@ -1,5 +1,5 @@
 = The chemistry of ACID
-:imagesdir: image
+//:imagesdir: image
 
 Transactions are omnipresent in today's enterprise systems, providing data integrity even in highly concurrent environments. So let's get started by first defining the term and the context where you might usually employ it.
 
