@@ -116,4 +116,4 @@ Even if the SOL standard mandates the use of the SERIALIZABLE isolation level, m
 
 Usually, READ_COMMITED is the right choice, since not even SERIALIZABLE can protect you from a "lost update" where the read/write happen in different transactions (and web requests). You should take into consideration your enterprise system requirements and set up tests for deciding which isolation level best suits your needs.
 
-If you are interested in learning more about Transactions you can follow me on my blog, or on https://twitter.com/vlad_mihalcea[twitter].
+If you are interested in learning more about Transactions you can follow me on http://vladmihalcea.wordpress.com[my blog], or on https://twitter.com/vlad_mihalcea[twitter].
