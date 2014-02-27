@@ -76,7 +76,7 @@ The SQL standard defines four Isolation levels:
 All but the SERIALIZABLE level are subject to data anomalies (phenomena) that might occur according to the following pattern:
 
 |===
-|Isolation Level, Dirty read, Non-repetable read, Phantom read
+|Isolation Level, Dirty read, Non-repeatable read, Phantom read
 |READ_UNCOMMITTED, allowed, allowed, allowed
 |READ_COMMITTED, prevented, allowed, allowed
 |REPETABLE_READ, prevented, prevented, allowed
@@ -91,11 +91,11 @@ image::acid-dirty-read.gif[]
 
 A dirty read happens when a transaction is allowed to read uncommitted changes of some other running transaction. This happens because there is no locking preventing it. In the picture above, you can see that the second transaction uses an inconsistent value as of the first transaction had rollbacked.
 
-. Non-repetable read
+. Non-repeatable read
 
-image::acid-non-repetable-read.gif[]
+image::acid-non-repeatable-read.gif[]
 
-A non-repetable read manifests when consecutive reads yield different results due to a concurring transaction that has just updated the record we're reading. This is undesirable since we end up using stale data. This is prevented by holding a shared lock (read lock) on the read record for the whole duration of the current transaction. 
+A non-repeatable read manifests when consecutive reads yield different results due to a concurring transaction that has just updated the record we're reading. This is undesirable since we end up using stale data. This is prevented by holding a shared lock (read lock) on the read record for the whole duration of the current transaction. 
 
 . Phantom read
 
@@ -108,7 +108,7 @@ Even if the SOL standard mandates the use of the SERIALIZABLE isolation level, m
 |===
 |Database, Default isolation Level
 |Oracle, READ_COMMITTED
-|MySQL, REPETABLE_READ
+|MySQL, REPEATABLE_READ
 |Microsoft SQL Server, READ_COMMITTED
 |PostgreSQL, READ_COMMITTED
 |DB2, CURSOR STABILITY (a.k.a READ_COMMITTED)
