@@ -28,10 +28,12 @@
     <node id="n1">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="78.0" width="138.0" x="1055.0" y="245.0"/>
+          <y:Geometry height="106.0" width="152.0" x="1055.0" y="245.0"/>
           <y:Fill color="#99CCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="custom" textColor="#000000" visible="true" width="130.919921875" x="3.5400390625" y="0.2470703125">id:1
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="106.908203125" modelName="custom" textColor="#000000" visible="true" width="130.919921875" x="10.5400390625" y="-0.4541015625">Product
+---------------------------
+id:1
 description:'Plasma TV''
 quantity:7
 likes:0
@@ -61,7 +63,7 @@ version:0<y:LabelModel>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="24.0" width="63.0" x="307.5" y="468.0"/>
-          <y:Fill color="#99CCFF" transparent="false"/>
+          <y:Fill color="#FF6600" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="56.037109375" x="3.4814453125" y="2.6494140625">quantity:6<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -99,14 +101,10 @@ version:0<y:LabelModel>
     <node id="n6">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="78.0" width="138.0" x="1055.0" y="441.0"/>
-          <y:Fill color="#99CCFF" transparent="false"/>
+          <y:Geometry height="24.0" width="63.0" x="519.0" y="544.0"/>
+          <y:Fill color="#99CC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="custom" textColor="#000000" visible="true" width="130.919921875" x="3.5400390625" y="0.2470703125">id:1
-description:'Plasma TV''
-quantity:6
-likes:0
-version:1<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="42.021484375" x="10.4892578125" y="2.6494140625">likes++<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -120,10 +118,10 @@ version:1<y:LabelModel>
     <node id="n7">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="24.0" width="63.0" x="518.0" y="528.0"/>
-          <y:Fill color="#99CCFF" transparent="false"/>
+          <y:Geometry height="24.0" width="157.0" x="629.0" y="628.0"/>
+          <y:Fill color="#FF99CC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="42.021484375" x="10.4892578125" y="2.6494140625">likes++<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="149.294921875" x="3.8525390625" y="2.6494140625">description: 'PlasmaTV HD'<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -137,10 +135,16 @@ version:1<y:LabelModel>
     <node id="n8">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="24.0" width="157.0" x="633.0" y="600.0"/>
-          <y:Fill color="#99CCFF" transparent="false"/>
+          <y:Geometry height="106.0" width="152.0" x="1054.0" y="437.0"/>
+          <y:Fill color="#FF6600" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="custom" textColor="#000000" visible="true" width="149.294921875" x="3.8525390625" y="2.6494140625">description: 'PlasmaTV HD'<y:LabelModel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="106.908203125" modelName="custom" textColor="#000000" visible="true" width="130.919921875" x="10.5400390625" y="-0.4541015625">Product
+---------------------------
+id:1
+description:'Plasma TV''
+quantity:7
+likes:0
+version:0<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -176,7 +180,6 @@ version:1<y:LabelModel>
       </data>
     </edge>
     <edge id="e2" source="n5" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-90.22259136212625" tx="0.5" ty="-90.34219269102994">
@@ -190,7 +193,6 @@ version:1<y:LabelModel>
       </data>
     </edge>
     <edge id="e3" source="n4" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="1.9765625" sy="-61.883720930232585" tx="0.5" ty="-60.0">
@@ -224,7 +226,6 @@ version:1<y:LabelModel>
       </data>
     </edge>
     <edge id="e5" source="n0" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-108.0" tx="-0.6666666666667425" ty="-179.66777408637864">
@@ -246,7 +247,6 @@ version:1<y:LabelModel>
       </data>
     </edge>
     <edge id="e6" source="n2" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-116.90365448504986" tx="-0.6666666666667425" ty="-115.70431893687703">
@@ -268,7 +268,6 @@ version:1<y:LabelModel>
       </data>
     </edge>
     <edge id="e7" source="n5" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-148.92524916943523" tx="-0.16666666666674246" ty="-77.5">
@@ -282,7 +281,6 @@ version:1<y:LabelModel>
       </data>
     </edge>
     <edge id="e8" source="n0" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="94.0" tx="0.0" ty="22.0"/>
@@ -304,7 +302,6 @@ WHERE VERSION = 0;<y:LabelModel>
       </data>
     </edge>
     <edge id="e9" source="n5" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-29.998338870431894" tx="-1.0" ty="-31.883720930232585">
@@ -318,10 +315,9 @@ WHERE VERSION = 0;<y:LabelModel>
       </data>
     </edge>
     <edge id="e10" source="n2" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="77.5" tx="-1.9921875" ty="78.0"/>
+          <y:Path sx="0.0" sy="94.5" tx="-1.9921875" ty="95.0"/>
           <y:LineStyle color="#000000" type="dotted" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:EdgeLabel alignment="left" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="62.8046875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="129.6953125" x="72.56112096348193" y="-31.40234375">UPDATE PRODUCT
@@ -340,10 +336,9 @@ WHERE VERSION = 0;<y:LabelModel>
       </data>
     </edge>
     <edge id="e11" source="n5" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="118.5" tx="0.0" ty="118.0"/>
+          <y:Path sx="0.0" sy="135.5" tx="0.0" ty="135.0"/>
           <y:LineStyle color="#000000" type="dotted" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#FF0000" visible="true" width="146.751953125" x="-409.57268834572267" y="-9.3505859375">StaleObjectStateException<y:LabelModel>
@@ -359,14 +354,13 @@ WHERE VERSION = 0;<y:LabelModel>
       </data>
     </edge>
     <edge id="e12" source="n4" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="152.5" tx="0.0" ty="154.0"/>
+          <y:Path sx="0.0" sy="174.5" tx="0.0" ty="176.0"/>
           <y:LineStyle color="#000000" type="dashed_dotted" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="left" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="62.8046875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="216.953125" x="16.0159912109375" y="-31.40234375">UPDATE PRODUCT
-SET DESCRIPTION = 'Plasma TV HD', 
+          <y:EdgeLabel alignment="left" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="62.8046875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="213.619140625" x="17.6829833984375" y="-31.40234375">UPDATE PRODUCT
+SET DESCRIPTION = 'Plasma HDTV', 
         VERSION = 1
 WHERE VERSION = 0;<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
@@ -381,10 +375,9 @@ WHERE VERSION = 0;<y:LabelModel>
       </data>
     </edge>
     <edge id="e13" source="n5" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="205.5" tx="0.0" ty="204.0"/>
+          <y:Path sx="0.0" sy="216.5" tx="0.0" ty="215.0"/>
           <y:LineStyle color="#000000" type="dashed_dotted" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
           <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#FF0000" visible="true" width="146.751953125" x="-197.8685302734375" y="-9.3505859375">StaleObjectStateException<y:LabelModel>
