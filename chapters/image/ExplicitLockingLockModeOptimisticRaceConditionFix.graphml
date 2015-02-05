@@ -73,7 +73,7 @@ version:0<y:LabelModel>
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="93.0" width="163.0" x="1010.5" y="566.5"/>
-          <y:Fill color="#FF6600" transparent="false"/>
+          <y:Fill color="#99CC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="92.20703125" modelName="custom" textColor="#000000" visible="true" width="160.92578125" x="1.037109375" y="0.396484375">Product
 ---------------------------
@@ -219,7 +219,6 @@ WHERE id =1<y:LabelModel>
       </data>
     </edge>
     <edge id="e7" source="n0" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="94.82142857142853" tx="-0.5" ty="95.11263736263732">
@@ -241,7 +240,6 @@ WHERE id =1<y:LabelModel>
       </data>
     </edge>
     <edge id="e8" source="n0" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-13.819503849443947" tx="0.5" ty="-12.680621617188772">
