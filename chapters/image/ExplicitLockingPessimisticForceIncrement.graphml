@@ -28,7 +28,29 @@
     <node id="n1">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="85.0" width="205.0" x="736.75" y="248.25"/>
+          <y:Geometry height="543.25" width="4.0" x="343.0" y="196.0"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="tr" textColor="#000000" visible="true" width="25.3515625" x="-25.3515625" y="4.0">Bob</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="587.5" width="4.0" x="728.0" y="196.0"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="tr" textColor="#000000" visible="true" width="55.369140625" x="-55.369140625" y="4.0">Database</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="85.0" width="205.0" x="739.9305555555557" y="196.0"/>
           <y:Fill color="#99CCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="custom" textColor="#000000" visible="true" width="170.927734375" x="17.0361328125" y="3.7470703125">Repository
@@ -46,32 +68,10 @@ version:0<y:LabelModel>
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n2">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="543.25" width="4.0" x="343.0" y="196.0"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="tr" textColor="#000000" visible="true" width="25.3515625" x="-25.3515625" y="4.0">Bob</y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n3">
-      <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="587.5" width="4.0" x="728.0" y="196.0"/>
-          <y:Fill color="#FFCC00" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="tr" textColor="#000000" visible="true" width="55.369140625" x="-55.369140625" y="4.0">Database</y:NodeLabel>
-          <y:Shape type="rectangle"/>
-        </y:ShapeNode>
-      </data>
-    </node>
     <node id="n4">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="63.0" width="85.5" x="736.75" y="363.25"/>
+          <y:Geometry height="63.0" width="85.5" x="739.9305555555557" y="404.25"/>
           <y:Fill color="#FF6600" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="62.8046875" modelName="custom" textColor="#000000" visible="true" width="82.708984375" x="1.3955078125" y="0.09765625">Commit
@@ -91,12 +91,12 @@ repository_id:1<y:LabelModel>
     <node id="n5">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="78.0" width="114.75" x="827.0" y="355.75"/>
+          <y:Geometry height="78.0" width="114.75" x="825.8402777777778" y="643.4930555555555"/>
           <y:Fill color="#99CC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="custom" textColor="#000000" visible="true" width="97.234375" x="8.7578125" y="0.2470703125">CommitChange
 ------------
-commit_id: 1
+commit_id: 2
 diff: "0a1,2..."
 path: "index.html"<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -112,14 +112,14 @@ path: "index.html"<y:LabelModel>
     <node id="n6">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="85.0" width="205.0" x="736.75" y="447.25"/>
+          <y:Geometry height="85.0" width="205.0" x="736.1701388888889" y="535.9930555555555"/>
           <y:Fill color="#99CCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="custom" textColor="#000000" visible="true" width="170.927734375" x="17.0361328125" y="3.7470703125">Repository
 ----------------------------
 id:1
 name:'Hibernate-Master-Class''
-version:1<y:LabelModel>
+version:2<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -133,12 +133,12 @@ version:1<y:LabelModel>
     <node id="n7">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="78.0" width="114.75" x="827.0" y="538.25"/>
+          <y:Geometry height="78.0" width="114.75" x="830.1805555555557" y="396.75"/>
           <y:Fill color="#99CC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="custom" textColor="#000000" visible="true" width="109.884765625" x="2.4326171875" y="0.2470703125">CommitChange
 ------------
-commit_id: 2
+commit_id: 1
 diff: "0a1,5..."
 path: "README.txt"<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -154,7 +154,7 @@ path: "README.txt"<y:LabelModel>
     <node id="n8">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="63.0" width="85.5" x="736.75" y="545.75"/>
+          <y:Geometry height="63.0" width="85.5" x="736.1701388888889" y="650.9930555555555"/>
           <y:Fill color="#FF6600" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="62.8046875" modelName="custom" textColor="#000000" visible="true" width="82.708984375" x="1.3955078125" y="0.09765625">Commit
@@ -174,12 +174,12 @@ repository_id:1<y:LabelModel>
     <node id="n9">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="78.0" width="114.75" x="946.5" y="538.25"/>
+          <y:Geometry height="78.0" width="114.75" x="949.6805555555557" y="396.75"/>
           <y:Fill color="#99CC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="custom" textColor="#000000" visible="true" width="87.3671875" x="13.69140625" y="0.2470703125">CommitChange
 ------------
-commit_id: 2
+commit_id: 1
 diff: "17c17..."
 path: "web.xml"<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
@@ -195,11 +195,14 @@ path: "web.xml"<y:LabelModel>
     <node id="n10">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="41.0" width="288.4999999999999" x="736.75" y="651.5"/>
-          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:Geometry height="85.0" width="205.0" x="739.9305555555557" y="286.80555555555554"/>
+          <y:Fill color="#99CCFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" modelName="custom" textColor="#FF0000" visible="true" width="278.171875" x="5.1640625" y="3.798828125">org.hibernate.StaleObjectStateException: 
-Row was updated or deleted by another transaction<y:LabelModel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="custom" textColor="#000000" visible="true" width="170.927734375" x="17.0361328125" y="3.7470703125">Repository
+----------------------------
+id:1
+name:'Hibernate-Master-Class''
+version:1<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -210,7 +213,7 @@ Row was updated or deleted by another transaction<y:LabelModel>
         </y:ShapeNode>
       </data>
     </node>
-    <edge id="e0" source="n3" target="n3">
+    <edge id="e0" source="n2" target="n2">
       <data key="d10">
         <y:ArcEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -222,7 +225,7 @@ Row was updated or deleted by another transaction<y:LabelModel>
         </y:ArcEdge>
       </data>
     </edge>
-    <edge id="e1" source="n2" target="n2">
+    <edge id="e1" source="n1" target="n1">
       <data key="d10">
         <y:ArcEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -234,51 +237,23 @@ Row was updated or deleted by another transaction<y:LabelModel>
         </y:ArcEdge>
       </data>
     </edge>
-    <edge id="e2" source="n3" target="n2">
+    <edge id="e2" source="n0" target="n2">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="-2.0223867023413504" sy="-165.90662780137149" tx="-3.6666666666666856" ty="-143.78162780137149"/>
-          <y:LineStyle color="#000000" type="dotted" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e3" source="n2" target="n3">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="2.0130208333333144" sy="-170.92230020113283" tx="-2.0163776970759955" ty="-193.04730020113283"/>
-          <y:LineStyle color="#000000" type="dotted" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="184.076171875" x="87.50126337541138" y="-9.350583892539078">session.get(Repository.class, 1L);<y:LabelModel>
-              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="80.90416879269873" distanceToCenter="false" position="center" ratio="0.441432722670818" segment="-1"/>
-            </y:ModelParameter>
-            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e4" source="n0" target="n3">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="4.333333333333329" sy="115.02157000595139" tx="-2.0337064555479856" ty="92.89657000595139"/>
+          <y:Path sx="-2.4765625" sy="-41.20448631843084" tx="-1.9902343749997726" ty="-63.32948631843084"/>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="left" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="106.908203125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="290.083984375" x="40.56570963817371" y="-53.45407696670475">INSERT INTO commit (id, repository_id) 
+          <y:EdgeLabel alignment="left" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="106.908203125" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="290.083984375" x="46.39605097728503" y="-53.45408958991521">INSERT INTO commit (id, repository_id) 
 VALUES (DEFAULT, 1);
 
 INSERT INTO commit_change (commit_id, diff, path) 
-VALUES (2, '0a1,5...', 'README.txt');
+VALUES (1, '0a1,5...', 'README.txt');
 INSERT INTO commit_change (commit_id, diff, path) 
-VALUES (2, '17c17...', 'web.xml');<y:LabelModel>
+VALUES (1, '17c17...', 'web.xml');<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="139.00000000000017" distanceToCenter="false" position="center" ratio="0.0843430127369243" segment="-1"/>
+              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="131.9999999999999" distanceToCenter="true" position="center" ratio="0.09336388672218608" segment="-1"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
@@ -286,13 +261,13 @@ VALUES (2, '17c17...', 'web.xml');<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e5" source="n2" target="n3">
+    <edge id="e3" source="n1" target="n2">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="7.333333333333314" sy="22.125" tx="0.0" ty="0.0"/>
+          <y:Path sx="1.9810655381945708" sy="94.54982275640486" tx="-2.0292661996128345" ty="72.42482275640486"/>
           <y:LineStyle color="#000000" type="dotted" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="left" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="33.40234375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="194.400390625" x="42.27654679034242" y="-16.701171875000057">UPDATE repository SET version=1 
+          <y:EdgeLabel alignment="left" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="33.40234375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="194.400390625" x="47.5823024055768" y="-16.701153806095135">UPDATE repository SET version=1 
 WHERE id=1 and version=0<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
@@ -305,17 +280,17 @@ WHERE id=1 and version=0<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e6" source="n0" target="n3">
+    <edge id="e4" source="n0" target="n2">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="5.333333333333329" sy="-229.29166666666669" tx="0.0" ty="-251.41666666666669"/>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="184.076171875" x="148.16283578796728" y="-9.350580851237027">session.get(Repository.class, 1L);<y:LabelModel>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="184.076171875" x="96.16283578796728" y="-9.350580851236998">session.get(Repository.class, 1L);<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.26572595022251827" segment="-1"/>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.17108134738929454" segment="-1"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
@@ -323,7 +298,7 @@ WHERE id=1 and version=0<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e7" source="n3" target="n0">
+    <edge id="e5" source="n2" target="n0">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-1.9869791666666288" sy="-222.41666666666669" tx="2.4817708333333286" ty="-200.29166666666669"/>
@@ -333,17 +308,17 @@ WHERE id=1 and version=0<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e8" source="n2" target="n3">
+    <edge id="e6" source="n1" target="n2">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="2.0130208333333144" sy="-52.95833333333337" tx="-1.9713541666666288" ty="-75.08333333333337"/>
+          <y:Path sx="2.0076385330396533" sy="206.8206017210864" tx="-1.9967990451389142" ty="184.6956017210864"/>
           <y:LineStyle color="#000000" type="dotted" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="290.083984375" x="45.444976806640625" y="-38.75291951497405">INSERT INTO commit (id, repository_id) 
+          <y:EdgeLabel alignment="left" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="290.083984375" x="45.45037841796875" y="-38.752945642194845">INSERT INTO commit (id, repository_id) 
 VALUES (DEFAULT, 1);
 
 INSERT INTO commit_change (commit_id, diff, path) 
-VALUES (1, '0a1,2...', 'index.html');<y:LabelModel>
+VALUES (2, '0a1,2...', 'index.html');<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -355,23 +330,64 @@ VALUES (1, '0a1,2...', 'index.html');<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e9" source="n0" target="n3">
+    <edge id="e7" source="n0" target="n2">
+      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="2.490673230889362" sy="212.49078997191623" tx="-1.9713541666666288" ty="190.36578997191623"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Path sx="2.4765625" sy="-166.125" tx="-1.9765625" ty="-188.25"/>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="left" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="33.40234375" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="194.400390625" x="43.51374912261963" y="-16.70116559449002">UPDATE repository SET version=1 
+          <y:EdgeLabel alignment="left" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="48.103515625" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="154.076171875" x="42.689969062805176" y="-24.051757812499943">UPDATE repository 
+SET version=1 
 WHERE id=1 and version=0<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.07150775852386973" segment="-1"/>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.06508519710784892" segment="-1"/>
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e8" source="n0" target="n2">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="2.476058903842775" sy="34.81582810277166" tx="-2.0078125" ty="12.690828102771661"/>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="52.65625" x="148.40043544769287" y="-9.350584250743964">COMMIT<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="0.0" distance="30.0" distanceToCenter="true" position="center" ratio="0.21065314178179648" segment="-1"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e9" source="n1" target="n1">
+      <data key="d9"/>
+      <data key="d10">
+        <y:SplineEdge>
+          <y:Path sx="-3.437499999999943" sy="-87.43402777777771" tx="2.0081922743056566" ty="66.21180555555554">
+            <y:Point x="730.0" y="456.5798611111111"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="dotted" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true" width="184.076171875" x="46.05182054161804" y="3.1442700895229905">session.get(Repository.class, 1L);<y:LabelModel>
+              <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="14.464769179780673" distanceToCenter="true" position="left" ratio="0.12139030420717814" segment="0"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+        </y:SplineEdge>
       </data>
     </edge>
   </graph>
